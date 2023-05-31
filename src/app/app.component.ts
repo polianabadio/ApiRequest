@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { PessoaService } from './pessoa.service';
+import { IPessoa } from './IPessoas';
 
 @Component({
   selector: 'app-root',
@@ -8,12 +9,19 @@ import { PessoaService } from './pessoa.service';
 })
 export class AppComponent {
   title = 'ApiRequest';
+  listaPessoas: IPessoa[] | undefined;
 
-  constructor(private pessoaService:PessoaService){ }
+  constructor(private pessoaService: PessoaService) { }
 
-  obterTodasPessoas(){
+  ngOnInit() {
+    this.obterTodasPessoas();
+  }
+
+  obterTodasPessoas() {
     this.pessoaService.obterTodos()
-    .then(pessoas => console.log(pessoas))
-    .catch(error => console.error(error));
+      .then(pessoas => {
+        this.listaPessoas = pessoas;
+      })
+      .catch(error => console.error(error));
   }
 }

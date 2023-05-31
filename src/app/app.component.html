@@ -1,2 +1,8 @@
-<button (click)="obterTodasPessoas()">Clique</button>
-
+<ul>
+  <li *ngFor="let pessoa of listaPessoas">
+    <p>Nome: {{ pessoa["Nome"]}}</p>
+    <p>Email: {{ pessoa["Email"] }}</p>
+    <p>Data de Nascimento: {{ pessoa["DataNascimento"] }}</p>
+    <p>Sexo: {{ pessoa["Sexo"] }}</p>
+  </li>
+</ul>
