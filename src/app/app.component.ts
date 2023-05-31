@@ -24,4 +24,6 @@ export class AppComponent {
       })
       .catch(error => console.error(error));
   }
+
+  buttonText=["Adicionar","Excluir","Editar","Buscar"];
 }
