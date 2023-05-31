@@ -1,12 +1,34 @@
+<button>Adicionar</button>
+
 <ul>
-  <li *ngFor="let pessoa of listaPessoas">
-    <p>Nome: {{ pessoa["Nome"]}}</p>
-    <p>Email: {{ pessoa["Email"] }}</p>
-    <p>Data de Nascimento: {{ pessoa["DataNascimento"] }}</p>
-    <p>Sexo: {{ pessoa["Sexo"] }}</p>
-    <button>Editar</button>
-    <button>Excluir</button>
-  </li>
+  <table>
+
+    <thead>
+      <tr>
+        <th>NOME</th>
+        <th>EMAIL</th>
+        <th>DATA DE NASCIMENTO</th>
+        <th>SEXO</th>
+        <th>AÇÕES</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pessoa of listaPessoas">
+      <td>{{ pessoa["Nome"]}}</td>
+      <td>{{ pessoa["Email"] }}</td>
+      <td>{{ pessoa["DataNascimento"] }}</td>
+      <td>{{ pessoa["Sexo"] }}</td>
+      <td>
+      <button>Editar</button>
+      <button>Excluir</button>
+      </td>
+
+      </tr>
+
+    </tbody>
+
+  </table>
 
 
 </ul>
