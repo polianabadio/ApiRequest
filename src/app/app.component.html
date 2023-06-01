@@ -11,13 +11,13 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let pessoa of listaPessoas">
+      <tr *ngFor="let pessoa of listaPessoas, let i = index">
       <td>{{ pessoa["Nome"]}}</td>
       <td>{{ pessoa["Email"] }}</td>
       <td>{{ pessoa["DataNascimento"] }}</td>
       <td>{{ pessoa["Sexo"] }}</td>
       <td id="acoes">
-      <button>Editar</button>
+      <button (click)="editarPessoa(pessoa, i);abrirFecharModal()">Editar</button>
       <button (click)="excluirPessoa(pessoa)">Excluir</button>
       </td>
       </tr>
@@ -27,33 +27,26 @@
   </table>
 </div>
 
+<button (click)="abrirFecharModal()">Adicionar</button>
 
 
-
-
-
-
-
-<div id="modal-cadastro">
+<div id="modal-cadastro" [style.display]="modal">
   <section class="area-cadastro">
     <div class="cadastro">
-      <span id="btn-close-cadastro">
-        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
-        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
-        </svg>
-      </span>
-
-      <form>
+      <button id="btn-close" (click)="abrirFecharModal()">X</button>
+        <span>
         <label>Nome:</label>
-        <input type="text" [(ngModel)]="nome">
+        <input type="text" [(ngModel)]="nome" placeholder="Nome">
         <label>Email:</label>
-        <input type="text" [(ngModel)]="email">
+        <input type="text" [(ngModel)]="email" placeholder="Email">
         <label>Data de nascimento:</label>
-        <input type="text" [(ngModel)]="dataNascimento">
+        <input type="text" [(ngModel)]="dataNascimento" placeholder="Data de nascimento">
         <label>Sexo:</label>
-        <input type="text" [(ngModel)]="sexo">
-        <button (click)="adicionarPessoa()">Adicionar</button>
-      </form>
+        <input type="text" [(ngModel)]="sexo" placeholder="Sexo" >
+        <button id="salvar" (click)="adicionarPessoa();abrirFecharModal()">Salvar</button>
+        </span>
       </div>
       </section>
       </div>
+
+

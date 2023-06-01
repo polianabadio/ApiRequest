@@ -4,44 +4,56 @@
   font-size: 1.2rem;
 }
 button{
-  padding: 10px;
+  padding: 0.5rem;
   background-color: #2196f3;
   color: #fff;
-  border-radius: 10px;
-  margin-left: 10px;
+  border-radius: 1vw;
+  margin-left: 2vw;
   border: 1px solid #fff;
+  height: 7vh;
+  width: 6vw;
+  position: inherit;
 }
 button:hover{
   background-color: #0c7cd5 ;
 }
 td
 {
-  text-align: left;
+  position: relative;
+  text-align: center;
+  top:3vh;
 }
+
+
 
 #acoes{
   text-align: center;
 }
-th
-{
-
-  padding: 20px;
-  border-radius: 10px;
-  background-color: #fff;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+th{
+  padding: 2vw;
   color: #0c7cd5;
-  border: 1px solid #0c7cd5;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 1px 1px 1px 1px #0c7cd5;
+  position: flex;
 }
 #tabela{
-  margin-left: auto;
+  display: block;
+  position: fixed;
+  top: 10vh;
+  margin-left: 17vw;
   margin-right: auto;
   max-width: 70vw;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 1px 1px 1px 1px #0c7cd5;
 }
 table{
   width: 70vw;
+  position: relative;
+  top: 0;
+  margin-bottom: 5vh;
+
 }
 /* CSS DO MODAL ADICIONAR */
 #modal-cadastro{
@@ -75,7 +87,7 @@ table{
   -o-border-radius: 10px;
 }
 
-.cadastro form{
+.cadastro span{
   display: flex;
   width: 18vw;
   flex-direction: column;
@@ -88,7 +100,7 @@ table{
   height: 5vh;
   outline: none;
   border-radius: 10px;
-  border: 2px solid #0c7cd5;
+  border: 2px solid #ced4da;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
@@ -97,33 +109,24 @@ table{
 }
 
 
-#btn-close-cadastro{
+#btn-close{
   position: fixed;
   color: #0c7cd5;
-  left: 59vw;
+  left: 58vw;
   top: 17vh;
+  color: #fff;
+  width: 1vw;
+  height: 1vh;
+  font-size: 1rem;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
-#btn-close-cadastro:hover{
-  color:#B31748
-}
-
-#obrigatorio{
-  color: #B31748;
-}
-
-label{
-  color: #866512;
-}
-
-#checkbox{
-  position: absolute;
-  width: 1.5vw;
-  top: 47vh;
-  margin-left: 1vw;
-
-}
-
-#label-check{
-  margin-left: 3vw;
+#salvar{
+  position: inherit;
+  margin-left: 2vw;
+  margin-top: 3vh;
+  width: 15vw;
+  margin-bottom: 0vh;
 }
