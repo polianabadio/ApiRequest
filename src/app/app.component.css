@@ -137,3 +137,45 @@ table{
   width: 15vw;
   margin-bottom: 0vh;
 }
+
+
+@media screen and (max-width: 920px) {
+ #tabela{
+  width: 110vw;
+  margin-left: 0;
+  box-shadow: 2px 2px 1px 1px  #fff;
+ }
+ table{
+  width: 100%;
+ }
+ input{
+  position: relative;
+  width: 70vw;
+  left: 0;
+ }
+ .cadastro span{
+  width: 70vw;
+ }
+ #btn-close{
+  top: 16vh;
+  left: 80vw;
+  width: 5vw;
+  height: 2vh;
+ }
+
+ #salvar{
+  margin-left: 25vw;
+  width: 25vw;
+ }
+
+ button{
+  padding: 0.1rem;
+  margin-bottom: 0.1rem;
+  width: 15vw;
+ }
+
+ #abrirFecharModal{
+  width: 40vw;
+ }
+
+}
