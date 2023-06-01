@@ -10,8 +10,9 @@
 
       </tr>
     </thead>
+
     <tbody>
-      <tr *ngFor="let pessoa of listaPessoas, let i = index">
+      <tr  *ngFor="let pessoa of (listaPessoas), let i = index" >
       <td>{{ pessoa["Nome"]}}</td>
       <td>{{ pessoa["Email"] }}</td>
       <td>{{ pessoa["DataNascimento"] }}</td>
@@ -26,9 +27,10 @@
 
   </table>
 </div>
-
-<button (click)="abrirFecharModal()">Adicionar</button>
-
+<button (click)="abrirFecharModal()">Adicionar registro</button>
+<!--<label>Digite o e-mail que deseja buscar:</label>
+<button (click)="buscarPorEmail(buscaEmail)">Buscar</button>
+<input type="text" [(ngModel)]="buscaEmail" placeholder="Email" > -->
 
 <div id="modal-cadastro" [style.display]="modal">
   <section class="area-cadastro">
@@ -48,5 +50,6 @@
       </div>
       </section>
       </div>
+
 
 

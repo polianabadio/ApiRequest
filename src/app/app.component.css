@@ -8,10 +8,10 @@ button{
   background-color: #2196f3;
   color: #fff;
   border-radius: 1vw;
-  margin-left: 2vw;
+  margin-left: 0.5vw;
   border: 1px solid #fff;
-  height: 7vh;
-  width: 6vw;
+  height: auto;
+  width: auto;
   position: inherit;
 }
 button:hover{
@@ -34,25 +34,32 @@ th{
   color: #0c7cd5;
   text-align: center;
   border-radius: 20px;
-  box-shadow: 1px 1px 1px 1px #0c7cd5;
+  box-shadow: 1px 1px  #0c7cd5;
   position: flex;
 }
 #tabela{
   display: block;
-  position: fixed;
-  top: 10vh;
+  position: absolute;
+  top: 20vh;
   margin-left: 17vw;
   margin-right: auto;
-  max-width: 70vw;
+  max-width: 100%;
   height: auto;
   border-radius: 20px;
-  box-shadow: 1px 1px 1px 1px #0c7cd5;
+  box-shadow: 2px 2px 1px 1px  #0c7cd5;
+  bottom: auto;
 }
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+
 table{
   width: 70vw;
   position: relative;
   top: 0;
   margin-bottom: 5vh;
+  border-collapse: collapse;
 
 }
 /* CSS DO MODAL ADICIONAR */
@@ -92,7 +99,7 @@ table{
   width: 18vw;
   flex-direction: column;
 }
-.cadastro input{
+ input{
   margin-top: 1vh;
   background-color: #ffff;
   border: none;
@@ -112,7 +119,7 @@ table{
 #btn-close{
   position: fixed;
   color: #0c7cd5;
-  left: 58vw;
+  left: 59vw;
   top: 17vh;
   color: #fff;
   width: 1vw;

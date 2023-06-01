@@ -16,20 +16,28 @@ export class AppComponent {
   email:string="";
   dataNascimento:string="";
   sexo:string="";
-  modal= 'block';
+  modal= 'none';
   i=0;
+  buscaEmail: string ="";
+  resultadoBusca: IPessoa | undefined;
 
   constructor(private pessoaService: PessoaService, private localStorageService: LocalStorageService) { }
 
   ngOnInit() {
+    this.listaPessoas = this.localStorageService.obterListaPessoasDoLocalStorage();
     this.obterTodasPessoas();
+    console.log(this.listaPessoas)
     this.i=-1;
   }
 
   obterTodasPessoas() {
     this.pessoaService.obterTodos()
       .then(pessoas => {
-        this.listaPessoas = pessoas;
+        if(this.listaPessoas?.length===0){
+        this.listaPessoas=pessoas;
+        this.localStorageService.salvarListaPessoasNoLocalStorage(this.listaPessoas)
+      }
+
       })
       .catch(error => console.error(error));
   }
@@ -60,6 +68,7 @@ export class AppComponent {
     this.email = '';
     this.dataNascimento = '';
     this.sexo = '';
+    this.localStorageService.salvarListaPessoasNoLocalStorage(this.listaPessoas)
 
   }
 
@@ -69,6 +78,7 @@ export class AppComponent {
     if (index !== -1) {
       this.listaPessoas.splice(index, 1);
     }}
+    this.localStorageService.salvarListaPessoasNoLocalStorage(this.listaPessoas)
   }
 
   abrirFecharModal(){
@@ -83,6 +93,7 @@ export class AppComponent {
     }
   }
 
+
   editarPessoa(pessoa: IPessoa, indice:number){
     this.i=indice;
     this.nome=pessoa.Nome,
@@ -90,6 +101,13 @@ export class AppComponent {
     this.dataNascimento=pessoa.DataNascimento,
     this.sexo=pessoa.Sexo
   }
+
+  // buscarPorEmail(buscaEmail: string): IPessoa | undefined {
+  //   if (this.listaPessoas != undefined) {
+  //     return this.resultadoBusca = this.listaPessoas.find(pessoa => pessoa.Email.trim() === buscaEmail.trim()) ;
+  //   }
+  //   return undefined;
+  // }
 
 
 }
