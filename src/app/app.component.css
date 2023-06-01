@@ -1,27 +1,27 @@
+/* CSS DA TABELA */
 *{
   color:#212529;
-  font-size: Bradley Hand, cursive;
+  font-size: 1.2rem;
 }
 button{
-  padding: 8px;
+  padding: 10px;
   background-color: #2196f3;
   color: #fff;
   border-radius: 10px;
   margin-left: 10px;
   border: 1px solid #fff;
 }
-
 button:hover{
   background-color: #0c7cd5 ;
 }
-
-
-
-td,th
+td
 {
   text-align: left;
 }
 
+#acoes{
+  text-align: center;
+}
 th
 {
 
@@ -34,4 +34,96 @@ th
   -o-border-radius: 10px;
   color: #0c7cd5;
   border: 1px solid #0c7cd5;
+}
+#tabela{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 70vw;
+}
+table{
+  width: 70vw;
+}
+/* CSS DO MODAL ADICIONAR */
+#modal-cadastro{
+  display:block;
+  z-index: 9999;
+  position: fixed;
+  top:14vh;
+  width: 100vw;
+  height: 80vh;
+  font-size: 2.4vh;
+}
+.area-cadastro{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.cadastro{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 3vw;
+  border-radius: 10px;
+  border: 4px solid #0c7cd5;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.cadastro form{
+  display: flex;
+  width: 18vw;
+  flex-direction: column;
+}
+.cadastro input{
+  margin-top: 1vh;
+  background-color: #ffff;
+  border: none;
+  padding-left: 1vw;
+  height: 5vh;
+  outline: none;
+  border-radius: 10px;
+  border: 2px solid #0c7cd5;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  margin-bottom: 1vh;
+}
+
+
+#btn-close-cadastro{
+  position: fixed;
+  color: #0c7cd5;
+  left: 59vw;
+  top: 17vh;
+}
+
+#btn-close-cadastro:hover{
+  color:#B31748
+}
+
+#obrigatorio{
+  color: #B31748;
+}
+
+label{
+  color: #866512;
+}
+
+#checkbox{
+  position: absolute;
+  width: 1.5vw;
+  top: 47vh;
+  margin-left: 1vw;
+
+}
+
+#label-check{
+  margin-left: 3vw;
 }
