@@ -1,4 +1,12 @@
-<button>Adicionar</button>
+<label>Nome:</label>
+<input type="text" [(ngModel)]="nome">
+<label>Email:</label>
+<input type="text" [(ngModel)]="email">
+<label>Data de nascimento:</label>
+<input type="text" [(ngModel)]="dataNascimento">
+<label>Sexo:</label>
+<input type="text" [(ngModel)]="sexo">
+<button (click)="adicionarPessoa()">Adicionar</button>
 
 <ul>
   <table>
@@ -21,7 +29,7 @@
       <td>{{ pessoa["Sexo"] }}</td>
       <td>
       <button>Editar</button>
-      <button>Excluir</button>
+      <button (click)="excluirPessoa(pessoa)">Excluir</button>
       </td>
 
       </tr>
