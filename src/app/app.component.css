@@ -36,6 +36,7 @@ th{
   border-radius: 20px;
   box-shadow: 1px 1px  #0c7cd5;
   position: flex;
+  background-color: #fff;
 }
 #tabela{
   display: block;
@@ -48,6 +49,8 @@ th{
   border-radius: 20px;
   box-shadow: 2px 2px 1px 1px  #0c7cd5;
   bottom: auto;
+  background-color: #fff;
+
 }
 tbody tr:nth-child(even) {
   background-color: #f9f9f9;
@@ -60,7 +63,7 @@ table{
   top: 0;
   margin-bottom: 5vh;
   border-collapse: collapse;
-
+  background-color: #fff;
 }
 /* CSS DO MODAL ADICIONAR */
 #modal-cadastro{
@@ -138,6 +141,12 @@ table{
   margin-bottom: 0vh;
 }
 
+#abrirFecharModal{
+  position: relative;
+  top: 10vh;
+  left:auto;
+  margin-left: 17%;
+}
 
 @media screen and (max-width: 920px) {
  #tabela{
@@ -175,7 +184,9 @@ table{
  }
 
  #abrirFecharModal{
-  width: 40vw;
+  width: 50vw;
+  height: 6vh;
+  left: auto;
  }
 
 }

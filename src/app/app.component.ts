@@ -16,7 +16,7 @@ export class AppComponent {
   email:string="";
   dataNascimento:string="";
   sexo:string="";
-  modal= 'block';
+  modal= 'none';
   i=0;
   buscaEmail: string ="";
   resultadoBusca: IPessoa | undefined;
